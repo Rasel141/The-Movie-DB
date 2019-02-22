@@ -1,22 +1,22 @@
 import React from 'react'
-
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <nav>
       <div class='nav-wrapper teal '>
-        <a href='#!' class='brand-logo left hide-on-small-and-down'>
+        <Link to='/' class='brand-logo left hide-on-small-and-down'>
           Movie DB
-        </a>
+        </Link>
         <ul class='right'>
           <li>
-            <a href='/'>Top Movie</a>
+            <NavLink to='/top'>Top Movie</NavLink>
           </li>
           <li>
-            <a href='/'>Popular Movie</a>
+            <NavLink to='/popular'>Popular Movie</NavLink>
           </li>
-          <li class='active'>
-            <a href='/'>Upcoming</a>
+          <li>
+            <NavLink to='/upcoming'>Upcoming</NavLink>
           </li>
         </ul>
       </div>
