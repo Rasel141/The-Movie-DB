@@ -1,3 +1,30 @@
-.release_date__color {
-    color: #979797
+.card-reveal__title {
+    margin-bottom: 1rem;
+}
+
+.card__box {
+    width: 100%;
+}
+
+
+@media(min-width: 500px) {
+    .card__box {
+        width: 48%;
+    }
+    
+    .card__box:nth-child(odd) {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+@media(min-width: 768px) {
+    .card__box {
+        width: 23%;
+    }
+    
+    .card__box:nth-child(even) {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
 }

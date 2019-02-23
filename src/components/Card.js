@@ -2,10 +2,10 @@ import React from 'react'
 import './Card.css'
 
 const Card = props => {
-  const {id, title, overview, backdrop_path, release_date } = props.movie
+  const {id, title, overview, backdrop_path, release_date, vote_average } = props.movie
 
   return (
-    <div className='card small ' key={id}>
+    <div className='card small card__box' key={id}>
       <div className='card-image waves-effect waves-block waves-light'>
         <img
           className='activator'
@@ -14,21 +14,30 @@ const Card = props => {
       </div>
 
       <div className='card-content'>
-        <span className='card-title activator grey-text text-darken-4'>
+        <span className='card-title activator red-text text-darken-4 '>
           {title}
           <i className='material-icons right'>more_vert</i>
         </span>
-        <p className="release_date__color">
+        <p className="grey-text text-darken-5">
           {release_date}
         </p>
       </div>
 
-      <div className='card-reveal'>
-        <span className='card-title grey-text text-darken-4'>
+      <div className='card-reveal grey lighten-5'>
+        <span className='card-title red-text text-darken-4 card-reveal__title'>
           {title}
           <i className='material-icons right'>close</i>
         </span>
-        <p>{overview}</p>
+
+        <span className='teal-text text-darken-4'>
+          Overview
+        </span>
+        <p className="grey-text text-darken-5">{overview}</p>
+        
+        <span className='teal-text text-darken-4'>
+          Average Vote
+        </span>
+        <p className="grey-text text-darken-5">{vote_average}</p>
       </div>
     </div>
   )
