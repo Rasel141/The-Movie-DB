@@ -4,11 +4,11 @@ import { Link, NavLink } from 'react-router-dom'
 const Navbar = () => {
   return (
     <nav>
-      <div class='nav-wrapper teal '>
-        <Link to='/' class='brand-logo left hide-on-small-and-down'>
+      <div className='nav-wrapper teal '>
+        <Link to='/' className='brand-logo left hide-on-small-and-down'>
           Movie DB
         </Link>
-        <ul class='right'>
+        <ul className='right'>
           <li>
             <NavLink to='/top'>Top Movie</NavLink>
           </li>

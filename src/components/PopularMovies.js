@@ -4,7 +4,7 @@ import axios from 'axios'
 import Card from './Card'
 class PopularMovies extends Component {
   state = {
-    results: []
+    movies: []
   }
 
   componentDidMount () {
@@ -14,7 +14,7 @@ class PopularMovies extends Component {
       )
       .then(res => {
         this.setState({
-          results: res.data.results
+          movies: res.data.results
         })
         console.log(res.data.results)
       })
@@ -23,8 +23,8 @@ class PopularMovies extends Component {
   render () {
     return (
       <div>
-        {this.state.results.map(result => {
-          return <Card result={result} />
+        {this.state.movies.map(movie => {
+          return <Card movie={movie} key={movie.id} />
         })}
       </div>
     )
