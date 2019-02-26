@@ -1,22 +1,25 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
+import './Navbar.css'
+
 const Navbar = () => {
   return (
     <nav>
-      <div className='nav-wrapper teal '>
+      <div className='nav-wrapper teal nav__root'>
         <Link to='/' className='brand-logo left hide-on-small-and-down'>
-          Movie DB
+          The Movie DB
         </Link>
+
         <ul className='right'>
           <li>
-            <NavLink to='/top'>Top Movie</NavLink>
+            <NavLink to='/' exact>Top Movie</NavLink>
           </li>
           <li>
-            <NavLink to='/popular'>Popular Movie</NavLink>
+            <NavLink to='/popular' exact>Popular Movie</NavLink>
           </li>
           <li>
-            <NavLink to='/upcoming'>Upcoming</NavLink>
+            <NavLink to='/upcoming' exact>Upcoming</NavLink>
           </li>
         </ul>
       </div>

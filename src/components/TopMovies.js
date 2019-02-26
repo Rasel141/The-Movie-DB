@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import api_key from '../apiKey'
 
 import Card from './Card'
@@ -8,23 +8,28 @@ class TopMovies extends Component {
     movies: []
   }
 
-  componentDidMount() {
-    fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${api_key}&language=en-US&page=1`)
-    .then(res => res.json())
-    .then(data => {
-      console.log(data.results)
-      this.setState({
-        movies: data.results
+  componentDidMount () {
+    fetch(
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=${api_key}&language=en-US&page=1`
+    )
+      .then(res => res.json())
+      .then(data => {
+        console.log(data.results)
+        this.setState({
+          movies: data.results
+        })
       })
-    })
   }
 
-  render() {
+  render () {
     return (
-      <div className='all-card__list'>
-        {this.state.movies.map(movie => {
-          return <Card movie={movie} key={movie.id} />
-        })}
+      <div>
+        <h2 className='center'>Top Movie Lists</h2>
+        <div className='all-card__list'>
+          {this.state.movies.map(movie => {
+            return <Card movie={movie} key={movie.id} />
+          })}
+        </div>
       </div>
     )
   }

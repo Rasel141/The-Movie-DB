@@ -3,7 +3,7 @@ import Card from './Card'
 
 const Home = () => {
   return (
-    <Card />
+    <div></div>
   )
 }
 

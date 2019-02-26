@@ -16,17 +16,19 @@ class App extends Component {
         <div>
           <Navbar />
           <Switch>
-            <Route path='/' component={Home} exact />
+            {/* <Route path='/' component={Home} exact /> */}
+            <Route
+              exact
+              path='/'
+              component={TopMovies}
+            />
             <Route
               path='/popular'
               component={PopularMovies}
-              activeClassName='active'
             />
-            <Route path='/top' component={TopMovies} activeClassName='active' />
             <Route
               path='/upcoming'
               component={UpcomingMovies}
-              activeClassName='active'
             />
           </Switch>
         </div>
