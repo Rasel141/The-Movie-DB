@@ -25,7 +25,7 @@ class PopularMovies extends Component {
 
   render () {
     return (
-      <div className=' all-card__list'>
+      <div className='all-card__list'>
         {this.state.movies.map(movie => {
           return <Card movie={movie} key={movie.id} />
         })}
